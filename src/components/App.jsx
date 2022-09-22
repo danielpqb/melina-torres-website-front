@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { GlobalStyle } from "../GlobalStyles";
 import UserContext from "../Context/UserContext";
 
+import Home from "./Screens/Home";
+
 export default function App() {
   return (
     <Container>
@@ -10,7 +12,7 @@ export default function App() {
         <UserContext.Provider value={{}}>
           <GlobalStyle />
           <Routes>
-            <Route path="/" element={<></>}></Route>
+            <Route path="/" element={<Home />}></Route>
             <Route path="*" element={<Navigate to="/" />}></Route>
           </Routes>
         </UserContext.Provider>
@@ -21,7 +23,7 @@ export default function App() {
 
 const Container = styled.div`
   & {
-    background-color: var(--rosa01);
+    background-color: var(--bg-color);
 
     flex-direction: column;
   }
