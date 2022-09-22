@@ -3,8 +3,8 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
   :root {
     --fontsize: 18px;
-    --azul-base: #065183;
-    --azul-destaque: #2082C5;
+    --light-pink: #065183;
+    --dark-pink: #2082C5;
   }
 
   /* Hide scrollbar */
