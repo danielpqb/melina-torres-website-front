@@ -1,12 +1,24 @@
+import { useEffect } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 
 import Icon from "./Icon";
 import Logo from "./Logo";
 
 export default function Header() {
+  const [color, setColor] = useState("var(--pink)");
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+  });
+
+  const listenScrollEvent = () => {
+    window.scrollY > 0 ? setColor("white") : setColor("var(--pink)");
+  };
+
   return (
-    <Container>
-      <Logo></Logo>
+    <Container color={color} inv={true}>
+      <Logo />
 
       <Icon onClick={() => {}} name={"menu"} />
     </Container>
@@ -18,7 +30,7 @@ const Container = styled.div`
     height: 60px;
     justify-content: space-between;
 
-    background: var(--pink);
+    background: ${({ color }) => color};
 
     width: 100vw;
 
@@ -29,5 +41,10 @@ const Container = styled.div`
     left: 0;
 
     z-index: 10;
+  }
+
+  & * {
+    filter: ${({ color }) =>
+      color === "white" ? "contrast(0)" : "brightness(1)"};
   }
 `;
