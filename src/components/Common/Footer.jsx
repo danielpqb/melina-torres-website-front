@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Icon from "./Icon";
 import Logo from "./Logo";
