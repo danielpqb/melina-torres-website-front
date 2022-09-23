@@ -21,7 +21,7 @@ export default function SubmitButton({ children, disabled, onClick }) {
 const Container = styled.button`
   & {
     cursor: pointer;
-    background: var(--light-pink);
+    background: var(--pink-em);
     height: 50px;
     border-radius: 25px;
 

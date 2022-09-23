@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Icon from "./Icon";
 import Logo from "./Logo";
@@ -41,7 +41,16 @@ export default function Footer() {
       <div>
         <SubmitButton onClick={() => {}}>Fale comigo</SubmitButton>
       </div>
-
+      <div>
+        <SubmitButton
+          onClick={() => {
+            window.location.href =
+              "https://www.doctoralia.com.br/melina-dias-torres/hepatologista-medico-clinico-geral-internista/rio-de-janeiro";
+          }}
+        >
+          Agendar consulta
+        </SubmitButton>
+      </div>
       <Rights>Todos os direitos reservados © 2022 Dra. Melina Torres</Rights>
     </Container>
   );
@@ -57,7 +66,7 @@ const Container = styled.div`
     padding: 10px 15px;
     padding-bottom: 0px;
 
-    background: var(--dark-pink);
+    background: var(--pink);
 
     width: 100vw;
   }

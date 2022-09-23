@@ -38,7 +38,7 @@ const Container = styled.div`
 
 const First = styled.div`
   & {
-    top: -12px;
+    top: -14px;
     left: -27px;
 
     font-size: 20px;
@@ -47,7 +47,7 @@ const First = styled.div`
 
 const Second = styled.div`
   & {
-    top: 9px;
+    top: 7px;
     left: 3px;
 
     font-size: 30px;

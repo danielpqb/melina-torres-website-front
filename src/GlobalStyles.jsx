@@ -3,9 +3,10 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
   :root {
     --fontsize: 18px;
-    --light-pink: rgb(225, 140, 233);
-    --dark-pink: rgb(199, 105, 207);
-    --bg-color: rgb(245, 245, 245)
+    --bg-color: rgb(245, 245, 245);
+    --pink: rgb(214, 161, 176);
+    --pink-em: rgb(212, 136, 158);
+    --dark-txt: rgb(20, 0, 20);
   }
 
   /* Hide scrollbar */
@@ -73,7 +74,7 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
   }
 
-  @media (max-width: 1100px) {
+  @media (max-width: 600px) {
     :root {
       --fontsize: 16px;
     }

@@ -23,7 +23,7 @@ export default function App() {
 
 const Container = styled.div`
   & {
-    background-color: var(--bg-color);
+    background: var(--bg-color);
 
     flex-direction: column;
   }
